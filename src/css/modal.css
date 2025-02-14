@@ -1,0 +1,65 @@
+#TaskModal {
+  font-family: 'pretendard';
+  font-weight: 600;
+  font-size: 1.6rem;
+  width: 50vw;
+  min-width: 22rem;
+  height: auto;
+  padding: 2rem 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 0 20rem gray;
+}
+
+.input-wrapper {
+  margin: 2rem 0;
+  --padding: 1.4rem;
+  --focus-color: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-wrapper input {
+  width: 16rem;
+  /* width: 80%;
+  height: 100%; */
+  padding: var(--padding);
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  /* background-color: rgb(234, 234, 234); */
+}
+
+.input-wrapper input:focus,
+.input-wrapper input:valid {
+  border: 1px solid var(--focus-color);
+}
+
+.input-wrapper label {
+  width: 5rem;
+  position: absolute;
+  background-color: white;
+  color: gray;
+  left: calc(50% - 8rem);
+  transition: all 0.2s ease-in;
+}
+
+.input-wrapper input:focus + label,
+.input-wrapper input:valid + label{
+  width: 3.5rem;
+  transform: translateY(calc(-1 * var(--padding) - 6px));
+  font-size: 14px;
+  color: var(--focus-color);
+}
+
+#TaskModal hr {
+  width: 80%;
+  color: gray;
+  margin: 2rem auto 1rem;
+}

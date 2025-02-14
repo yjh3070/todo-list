@@ -1,0 +1,26 @@
+.todo-btn { 
+  width: 6.5rem;
+  height: 2.3rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  box-shadow: none;
+  border-radius: 6px;
+  font-family: 'pretendard'; 
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.add-btn {
+  border: 1px solid black;
+  float: right;
+}
+
+.todo-done-btn {
+  border: 1px solid black;
+}
+
+.todo-cancel-btn {
+  margin-right: 1rem;
+  border: 1px solid rgb(167, 167, 167);
+  color: rgb(167, 167, 167);
+}
