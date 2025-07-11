@@ -25,15 +25,15 @@ const TodoList = () => {
   return (
     <div id="ToDoList">
       <h1>To Do List</h1>
-      <button className="todo-btn add-btn" onClick={() => {setModal(true); setModalType("add"); setModalId(0); setEditModalText("");}}>To Do 추가</button>
+      <button className="todo-btn add-btn" onClick={() => {setModal(true); setModalType("add"); setModalId(0); setEditModalText("");}}>To Do Add</button>
       <table className="todo-table">
         <thead className="todo-thead">
           <tr>
             <th>No.</th>
             <th>To Do</th>
-            <th>상태</th>
-            <th>수정</th>
-            <th>삭제</th>
+            <th>State</th>
+            <th>Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
         {/* todo 리스트 테이블 */}

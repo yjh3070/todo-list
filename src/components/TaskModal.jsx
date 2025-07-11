@@ -36,7 +36,7 @@ const TaskModal = (props) => {
     switch(action){
       case "add":
       case "edit":
-        todoText.length > 0 ? todo_edit(props.modalId, todoText, action) : alert("값을 입력하세요.");
+        todoText.length > 0 ? todo_edit(props.modalId, todoText, action) : alert("enter a value");
         set_false = todoText.length;
         break;
       case "remove":
@@ -53,8 +53,8 @@ const TaskModal = (props) => {
     <div id="TaskModal">
       <div>
         {
-          type === "add" ? "추가하기" : 
-          type === "edit" ? "수정하기" :
+          type === "add" ? "add" : 
+          type === "edit" ? "edit" :
           null
         }
       </div>
@@ -63,21 +63,24 @@ const TaskModal = (props) => {
           <div className="input-wrapper">
             <input type="text" name="task-name" id="input" value={todoText} onChange={onChange} required autoComplete="off"/>
             <label htmlFor="input">To Do</label>
-          </div> : "정말 삭제하시겠습니까?"
+          </div> : "Do you want delete?"
       }
       <hr/>
       {
         type === "add" ? 
           <div>
-            <button className="todo-btn todo-cancel-btn" onClick={() => setModal("cancel")}>취소</button>
-            <button className="todo-btn todo-done-btn" onClick={() => setModal("add")}>완료</button>
+            <button className="todo-btn todo-cancel-btn" onClick={() => setModal("cancel")}>cancel</button>
+            <button className="todo-btn todo-done-btn" onClick={() => setModal("add")}>add</button>
           </div>:
         type === "edit" ? 
           <div>
-            <button className="todo-btn todo-cancel-btn" onClick={() => setModal("cancel")}>취소</button>
-            <button className="todo-btn todo-done-btn" onClick={() => setModal("edit")}>수정</button> 
+            <button className="todo-btn todo-cancel-btn" onClick={() => setModal("cancel")}>cancel</button>
+            <button className="todo-btn todo-done-btn" onClick={() => setModal("edit")}>edit</button> 
           </div> :
-        <button className="todo-btn todo-done-btn" onClick={() => setModal("remove")}>삭제하기</button> 
+          <div>
+             <button className="todo-btn todo-cancel-btn" onClick={() => setModal("cancel")}>cancel</button>
+            <button className="todo-btn todo-done-btn" onClick={() => setModal("remove")}>delete</button> 
+          </div>
       }
     </div>
   )
